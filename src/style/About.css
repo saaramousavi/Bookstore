@@ -1,0 +1,110 @@
+/* ساختار اصلی و عمومی */
+body {
+  font-family: 'IRANSans', sans-serif;
+  line-height: 1.7;
+  direction: rtl;
+  margin: 0;
+  padding: 0;
+}
+
+/* بخش درباره ما */
+.about-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #fdfdfd, #f0f4f8);
+  gap: 3rem;
+}
+
+.about-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.about-content h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.about-content p {
+  font-size: 18px;
+  color: #444;
+  line-height: 2;
+  margin-bottom: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* ویژگی‌ها */
+.features {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  padding: 1rem 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.3s;
+  flex: 1 1 160px;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+}
+
+.icon {
+  font-size: 24px;
+}
+
+/* تصویر */
+.about-image {
+  flex: 1;
+  max-width: 400px;
+  text-align: center;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔻 ریسپانسیو برای موبایل و تبلت */
+@media (max-width: 768px) {
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .about-content, .about-image {
+    max-width: 100%;
+  }
+
+  .about-content h2 {
+    font-size: 26px;
+  }
+
+  .about-content p {
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .feature-card {
+    flex: 1 1 100%;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

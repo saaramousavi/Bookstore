@@ -1,0 +1,403 @@
+body {
+  font-family: "IRANSans", sans-serif;
+  line-height: 1.7;
+  direction: rtl;
+}
+
+.audio-banner {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(46, 80, 44, 0.15);
+  margin-bottom: 50px;
+  /* اضافه می‌کنیم */
+  height: 310px; /* ارتفاع ثابت مثل ارتفاع تصویر */
+}
+
+.audio-image {
+  width: 100%;
+  height: 100%; /* کل ارتفاع والد */
+  object-fit: contain; /* این باعث می‌شود تصویر کامل دیده شود و برش نخورد */
+  transition: filter 0.4s ease;
+  background-color: #ffffff; /* پس‌زمینه مشکی تا لبه‌ها پر شوند اگر تصویر کوچک بود */
+}
+
+.audio-banner-text {
+  position: absolute;
+  top: 50%;
+  right: 5%;
+  transform: translateY(-50%);
+  color: #46a96a; /* رنگ متن سفید */
+  max-width: 480px;
+  /* اضافه کردن پس‌زمینه نیمه شفاف برای خوانایی بهتر */
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px 30px;
+  border-radius: 15px;
+  box-shadow: 0 2px 15px rgba(105, 186, 88, 0.6);
+  text-shadow: none; /* حذف سایه متن */
+}
+
+.audio-banner-text h1 {
+  font-size: 36px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  letter-spacing: 0.05em;
+  color: #46a96a;
+}
+
+.audio-banner-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  font-weight: 500;
+  color: #9ae1b4;
+}
+.audio-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(135deg, #32e18a, #1fbcfb);
+  border: none;
+  padding: 14px 38px;
+  font-size: 18px;
+  font-weight: 800;
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(50, 225, 138, 0.3);
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.audio-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0)
+  );
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+  z-index: 0;
+}
+
+.audio-btn:hover::before {
+  left: 100%;
+}
+
+.audio-btn:hover {
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 12px 35px rgba(31, 188, 251, 0.4);
+}
+
+.audio-btn:focus {
+  outline: none;
+}
+
+.audio-btn > span {
+  font-size: 20px;
+  z-index: 2;
+  position: relative;
+}
+
+.audio-btn > strong {
+  z-index: 2;
+  position: relative;
+}
+
+/* ریسپانسیو برای موبایل */
+@media (max-width: 500px) {
+  .audio-btn {
+    font-size: 16px;
+    padding: 12px 24px;
+    gap: 6px;
+  }
+}
+
+/* در حالت ریسپانسیو هم متن وسط قرار بگیرد و پس‌زمینه داشته باشد */
+@media (max-width: 900px) {
+  .audio-banner {
+    height: auto; /* اجازه می‌دهیم ارتفاع بر اساس محتوا تنظیم شود */
+  }
+  .audio-image {
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+    background-color: #000;
+  }
+  .audio-banner-text {
+    position: static;
+    transform: none;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    box-shadow: none;
+  }
+}
+
+/* ویژگی‌ها */
+.audio-features {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.feature {
+  flex: 1 1 280px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 24px;
+  box-shadow: 0 10px 30px rgba(74, 226, 137, 0.12);
+  transition: box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature:hover {
+  box-shadow: 0 14px 42px rgba(63, 197, 137, 0.25);
+}
+
+.feature span {
+  font-size: 36px;
+  margin-bottom: 18px;
+  color: #4a90e2;
+  display: block;
+}
+
+.feature h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+.feature p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #495867;
+}
+
+/* جستجو */
+.search-section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 18px;
+  font-size: 17px;
+  border-radius: 25px;
+  border: 1px solid #d1d9e6;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  background: linear-gradient(135deg, #9ae1b4, #46a96a);
+}
+
+/* لیست کتاب‌ها */
+.audio-list {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin-bottom: 50px;
+}
+
+.audio-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9fcff;
+  border-radius: 14px;
+  padding: 18px 24px;
+  box-shadow: 0 5px 18px rgba(74, 144, 226, 0.15);
+  transition: box-shadow 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.audio-card:hover {
+  box-shadow: 0 8px 26px rgba(74, 226, 178, 0.25);
+}
+
+.audio-info h3 {
+  font-size: 20px;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+.audio-info p {
+  font-size: 14px;
+  color: #617a99;
+  margin: 2px 0;
+}
+
+.audio-controls {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+}
+
+.play-btn,
+.fav-btn,
+.download-btn {
+  background: #65ca8a;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 10px 18px;
+  border-radius: 22px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.25s ease;
+}
+
+.play-btn.playing {
+  background: #51b276;
+}
+
+.play-btn:hover,
+.fav-btn:hover,
+.download-btn:hover {
+  background: #51b276;
+  transform: scale(1.05);
+}
+
+/* پلیر صوتی */
+.audio-player {
+  width: 100%;
+  margin-top: 12px;
+  outline: none;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(74, 226, 183, 0.3);
+}
+
+/* نظرات */
+.reviews-section {
+  background: #f5f9ff;
+  border-radius: 20px;
+  padding: 28px 26px;
+  box-shadow: 0 10px 30px rgba(74, 144, 226, 0.1);
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.reviews-section h2 {
+  font-size: 28px;
+  font-weight: 900;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.review {
+  border-bottom: 1px solid #d1d9e6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.review:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.review p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #495867;
+  margin: 4px 0;
+}
+
+.review span {
+  display: block;
+  font-weight: 700;
+  font-size: 14px;
+  color: #4a90e2;
+}
+
+/* ریسپانسیو */
+@media (max-width: 900px) {
+  .audio-features {
+    flex-direction: column;
+  }
+
+  .feature {
+    margin-bottom: 30px;
+  }
+
+  .audio-banner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .audio-banner-text {
+    position: static;
+    background: rgba(255, 255, 255, 0.92);
+    padding: 20px;
+    border-radius: 0 0 20px 20px;
+    text-align: center;
+    color: #2c3e50;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .audio-image {
+    height: auto;
+    max-height: 280px;
+  }
+
+  .audio-banner:hover .audio-image {
+    filter: brightness(1);
+  }
+}
+
+@media (max-width: 500px) {
+  .audio-container {
+    padding: 20px 14px;
+  }
+
+  .audio-banner-text h1 {
+    font-size: 24px;
+  }
+
+  .audio-banner-text p {
+    font-size: 16px;
+  }
+
+  .audio-btn {
+    font-size: 16px;
+    padding: 12px 26px;
+  }
+
+  .audio-info h3 {
+    font-size: 18px;
+  }
+
+  .audio-info p {
+    font-size: 13px;
+  }
+
+  .play-btn,
+  .fav-btn,
+  .download-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+
+  .audio-controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
