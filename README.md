@@ -1,4 +1,4 @@
-# Bookstore creat react app
+# Bookstore create by react app
 
 
 - [Demo Project] <img width="1920" height="1817" alt="screencapture-localhost-3000-2025-07-18-19_53_32" src="https://github.com/user-attachments/assets/938f2552-155c-4397-b34f-77f5fd0d3d0c" />
