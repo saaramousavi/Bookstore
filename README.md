@@ -1,8 +1,7 @@
 # Bookstore creat react app
 
 
-- [Demo Project]<img width="1920" height="1817" alt="screencapture-localhost-3000-2025-07-18-19_53_32" src="https://github.com/user-attachments/assets/8b3ba073-980c-4882-9ea5-c7c6e291aa67" />
-
+- [Demo Project] <img width="1920" height="1817" alt="screencapture-localhost-3000-2025-07-18-19_53_32" src="https://github.com/user-attachments/assets/938f2552-155c-4397-b34f-77f5fd0d3d0c" />
 
 - Developed by Sara Mousavi
 
